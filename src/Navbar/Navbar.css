@@ -1,0 +1,12 @@
+.nav{
+    background-color: brown;
+    height: fit-content ;
+}
+.bbl-logo{
+    max-width: 10%;
+    max-height: 10%;
+}
+.nav-but{
+    display: flex ;
+    text-decoration: none ;
+}
