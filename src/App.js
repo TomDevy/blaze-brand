@@ -1,6 +1,7 @@
 import React from 'react';
 // import Navbar from './Navbar/Navbar';
 import Home from './Home/Home'
+import About from './About/About'
 // import About from './About/about'
 // import Services from './Services/services'
 // import Contact from './Contact/contact'
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Home />
+      <About />
       {/* <Router>
         <div>
           <Navbar /> 
