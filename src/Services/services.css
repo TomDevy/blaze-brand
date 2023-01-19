@@ -1,0 +1,150 @@
+.svs{
+    position: relative;
+    left: 550px;
+    color: rgb(26, 24, 24);
+}
+.grad img{
+    position: relative;
+    width: 140px;
+    left: 580px;
+    top: 10px;
+}
+.grad h3{
+    position: relative;
+    left: 540px;
+    color: rgb(26, 24, 24);
+}
+.str p{
+    height: 10px;
+    width: 1300px;
+    margin-left: 45px;
+}
+.cc{
+    background-color: rgb(182, 4, 4);
+    height: 30px;
+    width: 200px;
+    border-radius: 0.3rem;
+    position: relative;
+    top: 80px;
+    left: 42px;
+}
+.cc p{
+    color: white;
+    margin-left: 14px;
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+}
+.cc-text p{
+    height: 70px;
+    width: 520px;
+    position: relative;
+    left: 40px;
+    top: 75px;
+}
+.cc-text img{
+    height: 250px;
+    width: 530px;
+    position: relative;
+    left: 630px;
+    bottom: 70px;
+}
+.test-p img{
+    height: 250px;
+    width: 500px;
+    position: relative;
+    left: 40px;
+}
+.test-con{
+    background-color: rgb(182, 4, 4);
+    height: 30px;
+    width: 200px;
+    border-radius: 0.3rem;
+    position: relative;
+    bottom: 250px;
+    left: 600px;
+}
+.test-con p{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+.test-text p{
+    height: 50px;
+    width: 520px;
+    position: relative;
+    left: 600px;
+    bottom: 250px;
+}
+.uap{
+    background-color: rgb(182, 4, 4);
+    height: 30px;
+    width: 290px;
+    border-radius: 0.3rem;
+    position: relative;
+    top: 0.1px;
+    left: 40px;
+}
+.uap p{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+.uapt p{
+    height: 50px;
+    width: 520px;
+    position: relative;
+    left: 40px;
+    bottom: 0.5px;
+}
+.uap-e img{
+    position: relative;
+    left: 700px;
+    bottom: 150px;
+} 
+.uap-li{
+    line-height: 8px;
+    position: relative;
+    bottom: 90px;
+}
+.mtd{
+    background-color: rgb(182, 8, 8);
+    position: relative;
+    bottom: 55px;
+    height: 160px;
+}
+.mtd img{
+    height: 80px;
+    position: relative;
+    left: 600px;
+    top: 30px;
+}
+.mtd p{
+    color: white;
+    font-weight: 500;
+    position: relative;
+    left: 500px;
+    top: 20px;
+}
+.cas img{
+    height: 80px;
+    position: relative;
+    left: 600px;
+    top: 30px;
+}
+.cas p{
+    color: black;
+    font-weight: 500;
+    position: relative;
+    left: 520px;
+    top: 15px;
+}
+.cas-text p{
+    position: relative;
+    left: 40px;
+    top: 40px;
+}

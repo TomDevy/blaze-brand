@@ -1,0 +1,101 @@
+.team{
+    height: 900px;
+}
+.t-head h1{
+    position: relative;
+    top: 10px;
+    left: 570px;
+    font-weight: 700;
+}
+.grid {
+    position: relative;
+    left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+ .grid img{
+    cursor: pointer;
+    height: 300px;
+    width: 310px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.grid img:hover{
+    box-shadow: 10px 10px 5px #888888;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.5rem;
+        
+}
+.text-block h3{
+    position: relative;
+    bottom: 70px;
+    left: 70px;
+    color: white;
+}
+.text-block p{
+    position: relative;
+    bottom: 90px;
+    left: 40px;
+    color: white;
+}
+.text-block1 h3{
+    position: relative;
+    bottom: 90px;
+    left: 90px;
+    color: white;
+}
+.text-block1 p{
+    position: relative;
+    bottom: 110px;
+    width: 280px;
+    left: 15px;
+    text-align: center;
+    color: white;
+}
+.text-block2 h3{
+    position: relative;
+    bottom: 70px;
+    left: 90px;
+    color: white;
+}
+.text-block2 p{
+    position: relative;
+    bottom: 90px;
+    left: 40px;
+    color: white;
+}
+.text-block3 h3{
+    position: relative;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+}
+.text-block3 p{
+    position: relative;
+    bottom: 88px;
+    left: 78px;
+    color: white;
+}
+.text-block4 h3{
+    position: relative;
+    bottom: 90px;
+    left: 80px;
+    color: white;
+}
+.text-block4 p{
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+    right: 20px;
+    color: white;
+}

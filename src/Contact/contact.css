@@ -1,0 +1,148 @@
+
+.con-us{
+    background-color: rgb(228, 227, 227);
+    height: 90px;
+    position: relative;
+    top: 20px;
+}
+.con-us h1{
+    position: relative;
+    left: 600px;
+    top: 10px;
+    font-weight: 650;
+}
+.con-us p{
+    position: relative;
+    left: 570px;
+    bottom: 15px;
+    font-weight: 400;
+    color: rgb(49, 47, 47);
+}
+.addr{
+    background-color: white;
+    height: 300px;
+}
+.ci{
+    background-color: rgb(182, 14, 14);
+    width: 210px;
+    height: 30px;
+    border-radius: 0.3rem;
+    position: relative;
+    top: 55px;
+    left: 150px;
+}
+.ci p{
+    color: white;
+    position: relative;
+    left: 7px;
+    top: 3px;
+    font-weight: 640;
+}
+.cip p{
+    color: rgb(59, 57, 57);
+    position: relative;
+    left: 7px;
+    top: 3px;
+    font-weight: 500;
+    height: 10px;
+    width: 430px;
+}
+.add{
+    background-color: rgb(182, 14, 14);
+    width: 90px;
+    height: 30px;
+    border-radius: 0.3rem;
+    position: relative;
+    bottom: 265px;
+    left: 850px;
+}
+.add p{
+    color: white;
+    position: relative;
+    left: 7px;
+    top: 3px;
+    font-weight: 640;
+}
+.addi p{
+    color: rgb(59, 57, 57);
+    position: relative;
+    left: 850px;
+    bottom: 265px;
+    font-weight: 500;
+    height: 10px;
+    width: 280px;
+}
+.soc-m img{
+    height: 70px;
+    margin: 0px 10px 30px 20px;
+    position: relative;
+    left: 410px;
+    bottom: 160px;
+    cursor: pointer;
+}
+.soc-m img:hover{
+    box-shadow: 10px 10px 5px #888888;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.5rem;
+}
+.bookings{
+    height: 1000px;
+    background-color: rgb(216, 210, 210);
+}
+.bookings h2{
+    position: relative;
+    top: 20px;
+    left: 510px;
+    font-weight: bold;
+}
+.bookings p{
+    position: relative;
+    left: 480px;
+}
+.frm-d{
+    display: grid;
+    gap: 30px;
+    width: 700px;
+    position: relative;
+    left: 300px;
+    top: 30px;
+}
+.frm-d input{
+   height: 50px;
+   border: none;
+   border-radius: 0.1rem; 
+}
+.frm-d input::placeholder{
+    position: relative;
+    left: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+.b-in{
+    display: grid;
+    height: 50px;
+    width: 600px;
+    margin: 30px;
+    position: relative;
+    top: 20px;
+    left: 250px;
+    border-style: none;
+}
+.frm-d{
+    color: black;
+}
+#react-select-3-listbox{
+    width: 140px;
+    position: absolute;
+    left: 550px;
+}
+#react-select-5-listbox{
+    width: 140px;
+    position: absolute;
+    left: 550px;
+}
+#react-select-7-listbox{
+    width: 160px;
+    position: absolute;
+    left: 540px;
+}

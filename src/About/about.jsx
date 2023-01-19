@@ -2,6 +2,14 @@ import React from "react";
 
 import image1 from "../../src/components/images/Image 1.png"
 import image2 from "../../src/components/images/Image 2.png"
+import mission from "../../src/components/icons/Mission.png"
+import vision from "../../src/components/icons/Vision.png"
+
+import integrity from "../../src/components/icons/Integrity.png"
+import reliable from "../../src/components/icons/Reliability.png"
+import humanity from "../../src/components/icons/Humanity.png"
+import excel from "../../src/components/icons/Excellenece.png"
+
 import "./about.css"
 
 const About = () => {
@@ -19,7 +27,7 @@ clients' success. Whether they're looking to explore their study
 abroad opportunities or relocate abroad permanently, we 
 ensure that the entire process is smooth and well executed. 
 Our team comprises experienced professionals, enabling you 
-                to get the most professional 0results within stipulated timelines.</p>
+                to get the most professional results within stipulated timelines.</p>
             </div>
             <div className="a">
                 <img src={ image1} alt="great" />
@@ -44,8 +52,62 @@ opportunities through education, technology and migration
                     <img src={image2} alt="cool" />
                 </div>
             </div>
-            <div className="mis">
-                <img src="" alt="" />
+            <div className="vis-mis">
+                <div className="vis">
+                <img src={vision} alt="vision" />
+                <div className="vis-t">
+                    <div className="hb">
+                        <h1>VISION</h1>
+                    </div>
+                    <p>To become the number one sterling and 
+reliable Migration Advisory consult 
+helping Africans access global 
+opportunities either through study or 
+work pathways.</p>
+            </div>
+            </div>
+             <div className="mis">
+                <img src={mission} alt="mission" />
+                <div className="mis-t">
+                    <div className="hb">
+                        <h1>MISSION</h1>
+                    </div>
+                    <p>To help 200,000 Afrricans and more 
+access global opportunities through the 
+study and work pathways to compete 
+and maintain relevance on a global 
+scale.</p>
+            </div>
+            </div>
+            </div>
+            <div className="values">
+                <h1>OUR CORE VALUES</h1>
+                <div className="excel">
+                    <img src={excel} alt="excellence" />
+                    <p>EXCELLENCE</p>
+                </div>
+                <div className="integrity">
+                    <img src={integrity} alt="integrity" />
+                    <p>INTEGRITY</p>
+                </div>
+                <div className="reliable">
+                    <img src={reliable} alt="reliability" />
+                    <p>RELIABILITY</p>
+                </div>
+                <div className="humanity">
+                    <img src={humanity} alt="humanity" />
+                    <p>HUMANITY</p>
+                </div>
+            </div>
+            <div className="mail-l">
+                <h1>SUBSCRIBE TO OUR MAILING LIST</h1>
+                <div className="input">
+                    <input type="text" placeholder="First name" />
+                    <input type="text" placeholder="Last name" />
+                    <input type="text" placeholder="Email address"/>
+                    <input type="text" placeholder="Phone number" />
+                    <button>Submit</button>
+                </div>
             </div>
         </div>
     );
