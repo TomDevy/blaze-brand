@@ -9,15 +9,16 @@ const Navbar = () => {
     return (
         <nav className="nav">
             <div className="navbar">
-                <img className="logo" src={ logo } alt="bbl-logo" />
-            </div>
-            <ul className="nav-links">
+                <img className="logo" src={logo} alt="bbl-logo" />
+                <ul className="nav-links">
                 <Link to="/home">Home</Link>
                 <Link to="/about">About Us</Link>
                 <Link to="/services">Services</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/team">Team</Link>
             </ul>
+            </div>
+            
         </nav>
     );
 };
