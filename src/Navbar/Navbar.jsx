@@ -11,11 +11,10 @@ const Navbar = () => {
             <div className="navbar">
                 <img className="logo" src={logo} alt="bbl-logo" />
                 <ul className="nav-links">
-                <Link to="/home">Home</Link>
-                <Link to="/about">About Us</Link>
-                <Link to="/services">Services</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/team">Team</Link>
+                <Link to="/about">ABOUT US</Link>
+                <Link to="/services">SERVICES</Link>
+                <Link to="/contact">CONTACT</Link>
+                <Link to="/team">TEAM</Link>
             </ul>
             </div>
             

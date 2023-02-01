@@ -6,12 +6,14 @@ import Services from './Services/Services'
 import Team from './Team/Team'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
+import Policy from './Policy/policy'
 
 
 import { Route, Routes } from 'react-router-dom'
 
 import './App.css';
 import Navbar from './Navbar/Navbar';
+import Terms from './terms/Terms';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/services" element={<Services /> } />
         <Route path="/contact" element={<Contact />}  />
         <Route path="/team" element={<Team />}  />
+        <Route path="/policy" element={<Policy />}  />
+        <Route path="/terms" element={<Terms />}  />
       </Routes>
       <Footer />
       

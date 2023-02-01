@@ -1,168 +1,94 @@
 /* .abt{
     height: 20px;
 } */
-.vis-mis{
-    position: relative;
-    bottom: 60px;
+/* .text{
+    display: flex;
+    flex-direction: row;
+} */
+.a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 160px;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 70px;
 }
-.text{
-    height: 600px;
-    width: 600px;
+.text h3{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
 }
-.a img{
-    height: 230px;
-    width: 400px;
-    position: relative;
-    bottom: 600px;
-    left: 800px;
+.text p{
+    margin: 40px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
 }
-.texts{
-    height: 600px;
-    width: 600px;
-    position: relative;
-    left: 800px;
-    bottom: 600px;
+.b{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-top: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 70px;
 }
-.texts-b{
-    font-weight: bold;
+.top {
+    margin-bottom: 0 !important;
 }
-.b img{
-    position: relative;
-    right: 750px;
-    bottom: 250px;
-    height: 300px;
-}
-.vis{
-    position: relative;
-    background-color: rgb(212, 207, 207);
-    height: 150px;
-    width: 150px;
-    bottom: 800px;
-    left: 50px;
-    border-radius: 0.7rem;
-}
-.vis img{
-    position: relative;
-    left: 20px;
-    top: 20px;
-    height: 110px;
-}
-.vis-t{
-    position: relative;
-    bottom: 150px;
-    left: 180px;
-    height: 150px;
-    width: 280px;
-}
-.hb{
-    position: relative;
-    top: 20px;
-}
-.mis {
-    position: relative;
-    background-color: rgb(212, 207, 207);
-    height: 150px;
-    width: 150px;
-    bottom: 950px;
-    left: 800px;
-    border-radius: 0.7rem;
+.texts-list{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
 }
 
-.mis img {
-    position: relative;
-    left: 20px;
-    top: 20px;
-    height: 110px;
-}
-
-.mis-t {
-    position: relative;
-    bottom: 150px;
-    left: 180px;
-    height: 150px;
-    width: 280px;
-}
 .values{
-    height: 250px;
+    margin-top: 80px;
+    height: 330px;
     background-color: rgb(177, 1, 1);
-    position: relative;
-    bottom: 900px;
 }
 .values h1{
-    position: relative;
+    padding-top: 40px;
     color: white;
-    top: 30px;
-    left: 530px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+.core{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 10%;
 }
 .excel{
-    position: relative;
-    top: 30px;
-    left: 250px;
-    height: 80px;
+    text-align: center;
 }
 .excel p{
     color: white;
-    position: relative;
-    bottom: 10px;
     font-weight: bold;
-    right: 10px;
-}
-.integrity{
-    position: relative;
-    left: 500px;
-    bottom: 40px;
-}
-.integrity p{
-    color: white;
-    font-weight: bold ;
-    position: relative;
-    bottom: 15px;
-    left: 30px;
-}
-.reliable{
-    position: relative;
-    bottom: 200px;
-    left: 750px;
-}
-.reliable p{
-    color: white;
-    font-weight: bold;
-    position: relative;
-    bottom: 15px;
-    left: 15px;
-}
-.humanity{
-    position: relative;
-    bottom: 360px;
-    left: 1000px;
-}
-.humanity p{
-    color: white;
-    font-weight: bold;
-    position: relative;
-    bottom: 15px;
-    left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
 }
 .mail-l{
+    margin-top: 20px;
     height: 400px;
     background-color: rgb(226, 220, 220);
-    position: relative;
-    bottom: 925px;
 }
 .mail-l h1{
     color: rgb(56, 51, 51);
-    position: relative;
-    left: 370px;
-    top: 30px;
+    margin: 0px;
 }
 .mail-l input{
     display: block;
     height: 20px;
     width: 700px;
     margin: 30px;
-    position: relative;
-    top: 20px;
-    left: 250px;
     border-style: none;
 }
 .input button{
@@ -178,4 +104,59 @@
 }
 .input button:hover{
     background-color: brown;
+}
+@media screen and (max-width: 37.5em) {
+    .a{
+        flex-direction: column;
+    }
+    .a h3{
+        font-size: 25px;
+    }
+    .a p{
+        font-size: 15px;
+    }
+    .a img{
+        width: 100%;
+    }
+    .text p{
+        width: 100%;
+    }
+    .b{
+        flex-direction: column-reverse;
+    }
+    .b h3{
+        font-size: 25px;
+    }
+    .b p{
+        font-size: 15px;
+    }
+    .top{
+        font-size: 15px;
+    }
+    .texts-list{
+        font-size: 15px;
+    }
+    .b img{
+        width: 100%;
+    }
+    .values{
+        height: 100%;
+    }
+    .values h1{
+        font-size: 25px;
+    }
+    .excel p{
+        font-size: 15px;
+    }
+    .core{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 75em) {
+    .a{
+        flex-direction: column;
+    }
+    .b{
+        flex-direction: column;
+    }
 }

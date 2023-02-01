@@ -1,83 +1,53 @@
-
+.contact{
+    padding-top: 80px;
+}
 .con-us{
     background-color: rgb(228, 227, 227);
-    height: 90px;
-    position: relative;
-    top: 20px;
+    text-align: center;
+    /* height: 120px; */
 }
 .con-us h1{
-    position: relative;
-    left: 600px;
-    top: 10px;
-    font-weight: 650;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #303030;
 }
 .con-us p{
-    position: relative;
-    left: 570px;
-    bottom: 15px;
     font-weight: 400;
-    color: rgb(49, 47, 47);
+    font-size: 20px;
+    line-height: 30px;
+    color: #303030;
 }
 .addr{
-    background-color: white;
-    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 30px 0;
 }
-.ci{
-    background-color: rgb(182, 14, 14);
-    width: 210px;
-    height: 30px;
-    border-radius: 0.3rem;
-    position: relative;
-    top: 55px;
-    left: 150px;
-}
-.ci p{
+.add h3{
+    background-color:#B50000;
+    width: fit-content;
+    padding: 5px 10px;
     color: white;
-    position: relative;
-    left: 7px;
-    top: 3px;
-    font-weight: 640;
-}
-.cip p{
-    color: rgb(59, 57, 57);
-    position: relative;
-    left: 7px;
-    top: 3px;
-    font-weight: 500;
-    height: 10px;
-    width: 430px;
-}
-.add{
-    background-color: rgb(182, 14, 14);
-    width: 90px;
-    height: 30px;
     border-radius: 0.3rem;
-    position: relative;
-    bottom: 265px;
-    left: 850px;
 }
 .add p{
-    color: white;
-    position: relative;
-    left: 7px;
-    top: 3px;
-    font-weight: 640;
+    color: black;
+    font-weight: 600;
+    width: 400px;
 }
 .addi p{
     color: rgb(59, 57, 57);
-    position: relative;
-    left: 850px;
-    bottom: 265px;
     font-weight: 500;
-    height: 10px;
+    /* height: 10px; */
     width: 280px;
+}
+.soc-m{
+    text-align: center;
 }
 .soc-m img{
     height: 70px;
     margin: 0px 10px 30px 20px;
-    position: relative;
-    left: 410px;
-    bottom: 160px;
     cursor: pointer;
 }
 .soc-m img:hover{
@@ -86,35 +56,56 @@
     border-radius: 0.5rem;
 }
 .bookings{
-    height: 1000px;
+    text-align: center;
+    /* height: 1000px; */
     background-color: rgb(216, 210, 210);
 }
 .bookings h2{
-    position: relative;
-    top: 20px;
-    left: 510px;
-    font-weight: bold;
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #303030;
 }
 .bookings p{
-    position: relative;
-    left: 480px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #303030;
 }
 .frm-d{
     display: grid;
     gap: 30px;
-    width: 700px;
-    position: relative;
-    left: 300px;
-    top: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+.frm-d label{
+    margin-left: -460px;
+}
+.frm-d button{
+    color: white;
+    width: 259px;
+    height: 42px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    border-style: none;
+    margin-bottom: 20px;
+    border-radius: 0.3rem;
+    background-color: #B50000;
+}
+.frm-d button:hover{
+    background-color: #e03434;
 }
 .frm-d input{
-   height: 50px;
+   padding: 12px;
    border: none;
    border-radius: 0.1rem; 
 }
 .frm-d input::placeholder{
-    position: relative;
-    left: 10px;
+    /* position: relative;
+    left: 10px; */
     font-style: normal;
     font-weight: bold;
 }
@@ -133,16 +124,50 @@
 }
 #react-select-3-listbox{
     width: 140px;
-    position: absolute;
-    left: 550px;
+    /* position: absolute;
+    left: 550px; */
 }
 #react-select-5-listbox{
     width: 140px;
-    position: absolute;
-    left: 550px;
+    /* position: absolute;
+    left: 550px; */
 }
 #react-select-7-listbox{
     width: 160px;
-    position: absolute;
-    left: 540px;
+    /* position: absolute;
+    left: 540px; */
+}
+@media screen and (max-width: 37.5em) {
+    .addr{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .add p{
+        width: 100%;
+    }
+    .con-us h1{
+        font-size: 25px;
+    }
+    .con-us p{
+        font-size: 15px;
+    }
+    .bookings p{
+        font-size: 15px;
+    }
+    .frm-d{
+        /* padding-left: 30px; */
+        padding-right: 70PX;
+    }
+    .frm-d label{
+        margin-left: -50px;
+    }
+}
+@media screen and (max-width: 75em) {
+    .addr{
+        flex-direction: column;
+        padding-left: 100px;
+    }
+    .frm-d label{
+        margin-left: -170px;
+    }
 }
