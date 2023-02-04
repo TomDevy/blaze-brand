@@ -1,10 +1,10 @@
 .team{
-    height: 1000px;
-    padding-top: 80px;
+    height: auto;
+    padding-top: 100px;
 }
 .t-head{
     background-color: rgb(228, 227, 227);
-    height: 60px;
+    height: 50px;
 }
 .t-head h1{
     text-align: center;
@@ -54,6 +54,14 @@
 }
 @media screen and (max-width: 37.5em) {
     .grid{
-        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+    .team{
+        height: auto;
+    }
+}
+@media screen and (max-width: 75em) {
+    .grid{
+        grid-template-columns: 1fr;
     }
 }

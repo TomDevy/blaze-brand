@@ -13,6 +13,11 @@ import "./contact.css";
 
 const Contact = () => {
   const animatedComponents = makeAnimated();
+  const [buttonColor, setButtonColor] = useState("#B50000");
+
+  const handleClick = () => {
+    setButtonColor('green');
+  }
 
   return (
     <div className="contact">
@@ -23,10 +28,10 @@ const Contact = () => {
       <div className="addr">
         <div className="add">
           <h3>CONTACT INFORMATION</h3>
-            <p>
-              info@blazebrand.com, helpdesk@blazebrandlimited.com +234 705 327
-              6426, +234 816 305 9266
-            </p>
+          <p>
+            info@blazebrand.com, helpdesk@blazebrandlimited.com +234 705 327
+            6426, +234 816 305 9266
+          </p>
         </div>
         <div className="add">
           <h3>ADDRESS</h3>
@@ -103,7 +108,14 @@ const Contact = () => {
             <input className="checkb" type="checkbox" />
             Subscribe to our Newsletter
           </label>
-          <button>Book Appointment</button>
+          <button
+            style={{
+              backgroundColor: buttonColor === "green" ? "green" : "#B50000",
+            }}
+            onClick={handleClick}
+          >
+            Book Appointment
+          </button>
         </div>
       </div>
     </div>

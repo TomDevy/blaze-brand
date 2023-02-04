@@ -7,6 +7,7 @@ import Team from './Team/Team'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 import Policy from './Policy/policy'
+import Blog from './blog/Blog'
 
 
 import { Route, Routes } from 'react-router-dom'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/team" element={<Team />}  />
         <Route path="/policy" element={<Policy />}  />
         <Route path="/terms" element={<Terms />}  />
+        <Route path="/blog" element={<Blog />}  />
       </Routes>
       <Footer />
       

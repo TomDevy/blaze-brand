@@ -55,6 +55,9 @@
     .all{
         flex-direction: column;
     }
+    .all img{
+        width: 100%;
+    }
     .all p{
         width: 100%;
     }
@@ -65,11 +68,12 @@
 }
 @media screen and (max-width: 75em) {
     .all p{
-        width: 100%;
+        width: 80%;
         margin-right: 50px;
     }
     .all img{
         padding-right: 50px;
+        width: 80%;
     }
     .adr{
         flex-direction: column;

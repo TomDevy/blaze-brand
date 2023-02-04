@@ -6,7 +6,7 @@ import mission from "../../src/components/icons/Mission.png";
 import vision from "../../src/components/icons/Vision.png";
 
 import integrity from "../../src/components/icons/Integrity.png";
-import reliable from "../../src/components/icons/Reliability.png";
+import innovation from "../../src/components/icons/innovation.png";
 import humanity from "../../src/components/icons/Humanity.png";
 import excel from "../../src/components/icons/Excellenece.png";
 
@@ -40,7 +40,7 @@ const About = () => {
         <div className="text b">
           <div className="">
             <p>
-              As a growing brand, we are opportune to partner with top
+              As a growth-focused company, we are opportuned to partner with top
               educational institutions both locally and internationally as we
               edge closer to achieving our vision. We are committed to the
               betterment and empowerment of individuals accessing global
@@ -51,10 +51,10 @@ const About = () => {
               <b>How we work</b>
             </p>
             <div className="texts-list">
-              <li>We organize awareness campaigns</li>
-              <li>We offer guidance & career counselling</li>
-              <li>We offer training programs</li>
-              <li>We share valuable information</li>
+              <li>Personalized program and school selection assistance.</li>
+              <li>Comprehensive visa application support.</li>
+              <li>Regular check-ins and updates throughout the process.</li>
+              <li>Settlement Awareness Campaigns to your desired destination.</li>
             </div>
           </div>
           <img src={image2} alt="cool" />
@@ -101,8 +101,8 @@ const About = () => {
             <p>INTEGRITY</p>
           </div>
           <div className="excel">
-            <img src={reliable} alt="reliability" />
-            <p>RELIABILITY</p>
+            <img src={innovation} alt="innovation" />
+            <p>INNOVATION</p>
           </div>
           <div className="excel">
             <img src={humanity} alt="humanity" />

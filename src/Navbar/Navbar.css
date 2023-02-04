@@ -19,6 +19,9 @@
     display: flex;
     gap: 30px;
 }
+.mobile-nav{
+    display: none;
+}
 .nav-links a{
     text-decoration: none;
     color: white;
@@ -28,4 +31,24 @@
     transform: scale(1.3);
     width: 100px;
 
+}
+@media screen and (max-width: 37.5em) {
+    .nav-links{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    .mobile-links{
+        display: flex;
+        flex-direction: column;
+        background-color: #B50000;
+        text-align: center;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+    .mobile-links a{
+        padding: 10px 0;
+    }
 }

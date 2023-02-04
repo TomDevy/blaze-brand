@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import rev from "../../src/components/images/review2.png";
 
@@ -23,6 +23,11 @@ import Travel from "../../src/components/icons/FlightW.png";
 import "./home.css";
 
 const Home = () => {
+  const [buttonColor, setButtonColor] = useState("#B50000");
+
+  const handleClick = () => {
+    setButtonColor("green");
+  };
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -221,7 +226,14 @@ const Home = () => {
           <input type="number" placeholder="Phone number" />
         </div>
         <div className="mail-but">
-          <button>Submit</button>
+          <button
+            style={{
+              backgroundColor: buttonColor === "green" ? "green" : "#B50000",
+            }}
+            onClick={handleClick}
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>

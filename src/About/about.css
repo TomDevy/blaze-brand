@@ -5,158 +5,195 @@
     display: flex;
     flex-direction: row;
 } */
-.a{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 160px;
-    padding-left: 60px;
-    padding-right: 60px;
-    gap: 70px;
+.a {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 160px;
+  padding-left: 60px;
+  padding-right: 60px;
+  gap: 70px;
 }
-.text h3{
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
+.text h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
 }
-.text p{
-    margin: 40px 0px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+.text p {
+  margin: 40px 0px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
-.b{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-    padding-top: 0px;
-    padding-left: 60px;
-    padding-right: 60px;
-    gap: 70px;
+.b {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-top: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
+  gap: 70px;
 }
 .top {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
-.texts-list{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+.texts-list {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.values{
-    margin-top: 80px;
-    height: 330px;
-    background-color: rgb(177, 1, 1);
+.values {
+  margin-top: 80px;
+  height: 330px;
+  background-color: rgb(177, 1, 1);
 }
-.values h1{
-    padding-top: 40px;
-    color: white;
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
+.values h1 {
+  padding-top: 40px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
 }
-.core{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px 10%;
+.core {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10%;
 }
-.excel{
-    text-align: center;
+.excel {
+  text-align: center;
 }
-.excel p{
-    color: white;
-    font-weight: bold;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+.excel p {
+  color: white;
+  font-weight: bold;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 }
-.mail-l{
-    margin-top: 20px;
-    height: 400px;
-    background-color: rgb(226, 220, 220);
+.mail-l {
+  margin-top: 20px;
+  height: 400px;
+  background-color: rgb(226, 220, 220);
 }
-.mail-l h1{
-    color: rgb(56, 51, 51);
-    margin: 0px;
+.mail-l h1 {
+  color: rgb(56, 51, 51);
+  margin: 0px;
 }
-.mail-l input{
-    display: block;
-    height: 20px;
-    width: 700px;
-    margin: 30px;
-    border-style: none;
+.mail-l input {
+  display: block;
+  height: 20px;
+  width: 700px;
+  margin: 30px;
+  border-style: none;
 }
-.input button{
-    height: 30px;
-    width: 100px;
-    border-radius: 0.3rem;
-    border-style: none;
-    color: white;
-    background-color: rgb(165, 0, 0);
-    position: relative;
-    left: 280px;
-    top: 20px;
+.input button {
+  height: 30px;
+  width: 100px;
+  border-radius: 0.3rem;
+  border-style: none;
+  color: white;
+  background-color: rgb(165, 0, 0);
+  position: relative;
+  left: 280px;
+  top: 20px;
 }
-.input button:hover{
-    background-color: brown;
+.input button:hover {
+  background-color: brown;
 }
 @media screen and (max-width: 37.5em) {
-    .a{
-        flex-direction: column;
-    }
-    .a h3{
-        font-size: 25px;
-    }
-    .a p{
-        font-size: 15px;
-    }
-    .a img{
-        width: 100%;
-    }
-    .text p{
-        width: 100%;
-    }
-    .b{
-        flex-direction: column-reverse;
-    }
-    .b h3{
-        font-size: 25px;
-    }
-    .b p{
-        font-size: 15px;
-    }
-    .top{
-        font-size: 15px;
-    }
-    .texts-list{
-        font-size: 15px;
-    }
-    .b img{
-        width: 100%;
-    }
-    .values{
-        height: 100%;
-    }
-    .values h1{
-        font-size: 25px;
-    }
-    .excel p{
-        font-size: 15px;
-    }
-    .core{
-        flex-direction: column;
-    }
+  .a {
+    flex-direction: column;
+  }
+  .a h3 {
+    font-size: 25px;
+  }
+  .bvis h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .mv {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .mvh {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 90px;
+  }
+
+  .mvh img {
+    width: 60%;
+  }
+
+  .bvis h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .vis-ht p {
+    font-size: 15px;
+    line-height: 20px;
+    width: 270px;
+    text-align: center;
+    margin-top: 0;
+  }
+  .a p {
+    font-size: 15px;
+  }
+  .a img {
+    width: 100%;
+  }
+  .text p {
+    width: 100%;
+  }
+  .b {
+    flex-direction: column-reverse;
+  }
+  .b h3 {
+    font-size: 25px;
+  }
+  .b p {
+    font-size: 15px;
+  }
+  .top {
+    font-size: 15px;
+  }
+  .texts-list {
+    font-size: 15px;
+  }
+  .b img {
+    width: 100%;
+  }
+  .values {
+    height: 100%;
+  }
+  .values h1 {
+    font-size: 25px;
+  }
+  .excel p {
+    font-size: 15px;
+  }
+  .core {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mail-but {
+    margin-left: 30px;
+  }
 }
 @media screen and (max-width: 75em) {
-    .a{
-        flex-direction: column;
-    }
-    .b{
-        flex-direction: column;
-    }
+  .a {
+    flex-direction: column;
+  }
+  .b {
+    flex-direction: column;
+  }
 }

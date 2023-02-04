@@ -1,11 +1,11 @@
 .srvs{
-    padding-top: 75px;
+    padding-top: 100px;
 }
 .svs{
     color: rgb(26, 24, 24);
     text-align: center;
     background-color: #E7E7E7;
-    height: 60px;
+    height: 50px;
     padding: 0;
 }
 .svs h1{
@@ -110,12 +110,15 @@
 .uap-li{
     font-weight: 400;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 .mtd{
     background-color:#B50000;
     text-align: center;
     height: 214px;
+    margin-top: 20px;
 }
 .mtd img{
     width: 92.55px;
@@ -147,6 +150,8 @@
     line-height: 30px;
     color: #303030;
     margin-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 /* Media Queries */
 @media screen and (max-width: 37.5em){
@@ -161,6 +166,7 @@
     }
     .str p{
         font-size: 15px;
+        padding-top: 20px;
     }
     .cc-gen{
         flex-direction: column;
@@ -168,19 +174,22 @@
     .cc-desc p{
         font-size: 15px;
         width: 100%;
+        padding-top: 20px;
     }
     .te-gen{
         flex-direction: column;
     }
     .te-desc p{
         font-size: 15px;
+        padding-top: 20px;
     }
     .te-gen img{
         width: 100%;
     }
     .uap-li {
         font-size: 15px;
-        padding-left: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     .mtd{
         height: 230px;
@@ -203,6 +212,12 @@
     }
     .te-gen{
         flex-direction: column-reverse;
+    }
+    .cc-desc p{
+        padding-top: 20px;
+    }
+    .te-desc p{
+        padding-top: 20px;
     }
     .cas-text p{
         padding-left: 40px;

@@ -1,5 +1,5 @@
 .contact{
-    padding-top: 80px;
+    padding-top: 100px;
 }
 .con-us{
     background-color: rgb(228, 227, 227);
@@ -140,7 +140,9 @@
 @media screen and (max-width: 37.5em) {
     .addr{
         flex-direction: column;
-        padding: 30px;
+    }
+    .add{
+        margin-right: 50px;
     }
     .add p{
         width: 100%;
@@ -151,15 +153,31 @@
     .con-us p{
         font-size: 15px;
     }
+    .add p{
+        font-size: 15px;
+    }
     .bookings p{
         font-size: 15px;
     }
     .frm-d{
         /* padding-left: 30px; */
-        padding-right: 70PX;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .frm-d label{
-        margin-left: -50px;
+        /* margin-left: 50px; */
+        /* width: 0%; */
+        margin-right: 30px;
+        margin-left: 0 !important;
+    }
+    
+    .checkb {
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+    .frm-d button{
+        margin-left: 50px;
+        border: none;
     }
 }
 @media screen and (max-width: 75em) {
@@ -167,7 +185,18 @@
         flex-direction: column;
         padding-left: 100px;
     }
+    .frm-d {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
     .frm-d label{
-        margin-left: -170px;
+        margin-left: 20px;
+    }
+    .frm-d button{
+        margin: 0 auto 20px;
+    }
+    .checkb{
+        width: auto;
     }
 }

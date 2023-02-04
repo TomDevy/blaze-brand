@@ -1,0 +1,11 @@
+.blog{
+    padding-top: 100px;
+}
+.blog-head{
+    background-color: rgb(226, 220, 220);
+    height:50px;
+    text-align: center;
+}
+.blog-head p{
+    padding-bottom: 70px;
+}
