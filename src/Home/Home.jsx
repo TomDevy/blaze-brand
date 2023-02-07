@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
+import emailjs from '@emailjs/browser';
 
 import rev from "../../src/components/images/review2.png";
 
@@ -21,12 +23,54 @@ import Travel from "../../src/components/icons/FlightW.png";
 
 import "./home.css";
 
-const Home = () => {
-  const [buttonColor, setButtonColor] = useState("#B50000");
+const Result = () => {
+  return (
+    <p>"Your message has been sent Successfully. We will contact you soon!"</p>
+  )
+}
 
-  const handleClick = () => {
-    setButtonColor("green");
+const Home = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+   const form = useRef();
+
+  const serviceId = "service_loyi959";
+  const templateId = "template_v0vv5n5";
+  const publicKey = "zFef1F-ROsvwMHOX1";
+  const [ result, showResult ] = useState(false)
+   const sendEmail = (e) => {
+     e.preventDefault();
+
+     emailjs
+       .sendForm(
+         serviceId,
+         templateId,
+         form.current,
+         publicKey
+       )
+       .then(
+         (result) => {
+           console.log('Success');
+         },
+         (error) => {
+          console.log('failed');
+         }
+     );
+     e.target.reset();
+     showResult(true)
   };
+
+  //hide result
+
+  setTimeout(() => {
+    showResult(false)
+  }, 5000
+  )
+  
+  const handleSubmit = () => {
+    setIsSubmitted(true);
+  };
+  
   
   return (
     <div className="abu">
@@ -157,23 +201,29 @@ const Home = () => {
         </div>
       </div>
       <div className="mail-list">
-        <h1>SUBSCRIBE TO OUR MAILING LIST</h1>
-        <div className="frm-d">
-          <input type="text" placeholder="First name" />
-          <input type="text" placeholder="Last name" />
-          <input type="text" placeholder="Email address" />
-          <input type="number" placeholder="Phone number" />
-        </div>
-        <div className="mail-but">
-          <button
-            style={{
-              backgroundColor: buttonColor === "green" ? "green" : "#B50000",
-            }}
-            onClick={handleClick}
-          >
-            Submit
-          </button>
-        </div>
+        <h1>GET A FREE SOP</h1>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="frm-d">
+            <input type="text" name="firstName" placeholder="First name" />
+            <input type="text" name="lastName" placeholder="Last name" />
+            <input type="text" name="email" placeholder="Email address" />
+            <input type="number" name="phone" placeholder="Phone number" />
+          </div>
+          <div className="mail-but">
+            <button
+              type="submit"
+              style={{
+                backgroundColor: isSubmitted ? "green" : "#B50000",
+              }}
+              onClick={handleSubmit}
+            >
+              {isSubmitted ? "Submitted" : "Submit"}
+            </button>
+            <div className="form-result">
+              { result ? <Result/> : null}
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );

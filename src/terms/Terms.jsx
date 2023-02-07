@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import './terms.css'
+import "../Policy/policy.css";
 
 const Terms = () => {
   return (
@@ -62,6 +62,6 @@ const Terms = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Terms
+export default Terms;

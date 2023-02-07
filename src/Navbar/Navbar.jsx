@@ -13,8 +13,10 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="navbar">
-        <img className="logo" src={logo} alt="bbl-logo" />
-        <ul className="nav-links">
+        <Link to="./">
+              <img className="logo" src={logo} alt="bbl-logo" />
+        </Link>
+              <ul className="nav-links">
           <Link to="/about">ABOUT US</Link>
           <Link to="/services">SERVICES</Link>
           <Link to="/contact">CONTACT</Link>
