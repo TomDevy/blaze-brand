@@ -6,7 +6,7 @@ import Services from './Services/services'
 import Team from './Team/team'
 import Contact from './Contact/contact'
 import Footer from './Footer/Footer'
-import Policy from './Policy/Policy'
+import Policy from './Policy/policy'
 import Blog from './blog/Blog'
 
 
