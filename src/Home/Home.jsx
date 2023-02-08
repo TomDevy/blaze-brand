@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 import rev from "../../src/components/images/review2.png";
 
@@ -26,52 +26,45 @@ import "./home.css";
 const Result = () => {
   return (
     <p>"Your message has been sent Successfully. We will contact you soon!"</p>
-  )
-}
+  );
+};
 
 const Home = () => {
+  const [isDone, setIsDone] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-   const form = useRef();
+  const form = useRef();
 
   const serviceId = "service_loyi959";
   const templateId = "template_v0vv5n5";
   const publicKey = "zFef1F-ROsvwMHOX1";
-  const [ result, showResult ] = useState(false)
-   const sendEmail = (e) => {
-     e.preventDefault();
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form.current.value)
 
-     emailjs
-       .sendForm(
-         serviceId,
-         templateId,
-         form.current,
-         publicKey
-       )
-       .then(
-         (result) => {
-           console.log('Success');
-         },
-         (error) => {
-          console.log('failed');
-         }
-     );
-     e.target.reset();
-     showResult(true)
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log("Success");
+      },
+      (error) => {
+        console.log("failed");
+      }
+    );
+    e.target.reset();
+    showResult(true);
   };
 
   //hide result
 
   setTimeout(() => {
-    showResult(false)
-  }, 5000
-  )
-  
+    showResult(false);
+  }, 5000);
+
   const handleSubmit = () => {
     setIsSubmitted(true);
   };
-  
-  
+
   return (
     <div className="abu">
       <div className="ab">
@@ -204,10 +197,10 @@ const Home = () => {
         <h1>GET A FREE SOP</h1>
         <form ref={form} onSubmit={sendEmail}>
           <div className="frm-d">
-            <input type="text" name="firstName" placeholder="First name" />
-            <input type="text" name="lastName" placeholder="Last name" />
-            <input type="text" name="email" placeholder="Email address" />
-            <input type="number" name="phone" placeholder="Phone number" />
+            <input  type="text" name="firstName" placeholder="First name" />
+            <input  type="text" name="lastName" placeholder="Last name" />
+            <input  type="text" name="email" placeholder="Email address" />
+            <input  type="number" name="phone" placeholder="Phone number" />
           </div>
           <div className="mail-but">
             <button
@@ -219,9 +212,7 @@ const Home = () => {
             >
               {isSubmitted ? "Submitted" : "Submit"}
             </button>
-            <div className="form-result">
-              { result ? <Result/> : null}
-            </div>
+            <div className="form-result">{result ? <Result /> : null}</div>
           </div>
         </form>
       </div>

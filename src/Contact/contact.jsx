@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
@@ -9,14 +9,48 @@ import tw from "../../src/components/icons/Frame-2.png";
 import ln from "../../src/components/icons/Frame.png";
 import wh from "../../src/components/icons/Whatsapp Icon.png";
 
+
+import emailjs from '@emailjs/browser'
+
 import "./contact.css";
+const Result = () => {
+  return (
+    <p>"Your message has been sent Successfully. We will contact you soon!"</p>
+  );
+};
 
 const Contact = () => {
   const animatedComponents = makeAnimated();
-  const [buttonColor, setButtonColor] = useState("#B50000");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleClick = () => {
-    setButtonColor('green');
+  const form = useRef();
+
+  const serviceId = "service_loyi959";
+  const templateId = "template_v0vv5n5";
+  const publicKey = "zFef1F-ROsvwMHOX1";
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log("Success");
+      },
+      (error) => {
+        console.log("failed");
+      }
+    );
+    e.target.reset();
+    showResult(true);
+  };
+
+  //hide result
+
+  setTimeout(() => {
+    showResult(false);
+  }, 5000);
+  const handleSubmit = () => {
+    setIsSubmitted(true);
   }
 
   return (
@@ -58,12 +92,14 @@ const Contact = () => {
       <div className="bookings">
         <h2>BOOK AN APPOINTMENT</h2>
         <p>Provide your details below & we'll get back to you.</p>
+        <form ref={form} onSubmit={sendEmail}>
         <div className="frm-d">
-          <input type="text" placeholder="First name" />
-          <input type="text" placeholder="Last name" />
-          <input type="text" placeholder="Email address" />
-          <input type="text" placeholder="Phone number" />
-          <Select
+          <input type="text" name="firstName" placeholder="First name" />
+          <input type="text" name="lastName" placeholder="Last name" />
+          <input type="text" name="email" placeholder="Email address" />
+          <input type="text" name="phone" placeholder="Phone number" />
+            <Select
+              name="studyLocation"
             placeholder="Your Preffered study location"
             closeMenuOnSelect={true}
             components={animatedComponents}
@@ -73,7 +109,8 @@ const Contact = () => {
               { value: "United States", label: "United States" },
             ]}
           />
-          <Select
+            <Select
+              name="studyTime"
             placeholder="When do you plan study?"
             closeMenuOnSelect={true}
             components={animatedComponents}
@@ -89,7 +126,8 @@ const Contact = () => {
               },
             ]}
           />
-          <Select
+            <Select
+              name="studyLevel"
             className="custom-class"
             placeholder="Preffered study level"
             closeMenuOnSelect={true}
@@ -109,14 +147,17 @@ const Contact = () => {
             Subscribe to our Newsletter
           </label>
           <button
+            type="submit"
             style={{
-              backgroundColor: buttonColor === "green" ? "green" : "#B50000",
+              backgroundColor: isSubmitted ? "green" : "#B50000",
             }}
-            onClick={handleClick}
+            onClick={handleSubmit}
           >
-            Book Appointment
+            {isSubmitted ? "Booked" : "Book Appointment"}
           </button>
-        </div>
+          <div className="form-result">{result ? <Result /> : null}</div>
+          </div>
+          </form>
       </div>
     </div>
   );
