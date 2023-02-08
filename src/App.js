@@ -3,11 +3,11 @@ import React from 'react';
 import Home from './Home/Home'
 import About from './About/about'
 import Services from './Services/services'
-import Team from './Team/Team'
-import Contact from './Contact/Contact'
-import Footer from './Footer/Footer'
+import Team from './Team/team'
+import Contact from './Contact/contact'
+import Footer from './Footer/footer'
 import Policy from './Policy/policy'
-import Blog from './blog/Blog'
+import Blog from './blog/blog'
 
 
 import { Route, Routes } from 'react-router-dom'
