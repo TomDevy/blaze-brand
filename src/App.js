@@ -2,7 +2,7 @@ import React from 'react';
 // import Navbar from './Navbar/Navbar';
 import Home from './Home/Home'
 import About from './About/about'
-import Services from './Services/Services'
+import Services from './Services/services'
 import Team from './Team/Team'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
