@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useRef} from "react";
 
+import emailjs from "@emailjs/browser";
 import image1 from "../../src/components/images/Image 1.png";
 import image2 from "../../src/components/images/Image 2.png";
 import mission from "../../src/components/icons/Mission.png";
@@ -12,7 +13,57 @@ import excel from "../../src/components/icons/Excellenece.png";
 
 import "./about.css";
 
+const Result = () => {
+  return (
+    <p>"Your message has been sent Successfully. Check your mail!"</p>
+  );
+};
+
+
 const About = () => {
+   const [firstName, setFirstName] = useState("");
+   const [lastName, setLastName] = useState("");
+   const [phone, setPhone] = useState("");
+   const [email, setEmail] = useState("");
+   const [isSubmitted, setIsSubmitted] = useState(false);
+
+   const form = useRef();
+
+   const serviceId = "service_loyi959";
+   const templateId = "template_v0vv5n5";
+   const publicKey = "zFef1F-ROsvwMHOX1";
+   const [result, showResult] = useState(false);
+   const sendEmail = (e) => {
+     e.preventDefault();
+
+     if (!firstName || !lastName || !email || !phone) {
+       return alert("Please fill in your details!");
+     }
+
+     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+       (result) => {
+         console.log("Success");
+         setFirstName("");
+         setLastName("");
+         setPhone("");
+         setEmail("");
+         showResult(true);
+         setIsSubmitted(true);
+         setTimeout(() => setIsSubmitted(false), 5000);
+       },
+       (error) => {
+         console.log("failed");
+       }
+     );
+   };
+
+   //hide result
+
+   setTimeout(() => {
+     showResult(false);
+   }, 5000);
+
+
   return (
     <div className="abt">
       <div className="text a">
@@ -40,7 +91,7 @@ const About = () => {
         <div className="text b">
           <div className="">
             <p>
-              As a growth-focused company, we are opportuned to partner with top
+              As a growth-focused company, we are opportune to partner with top
               educational institutions both locally and internationally as we
               edge closer to achieving our vision. We are committed to the
               betterment and empowerment of individuals accessing global
@@ -54,7 +105,9 @@ const About = () => {
               <li>Personalized program and school selection assistance.</li>
               <li>Comprehensive visa application support.</li>
               <li>Regular check-ins and updates throughout the process.</li>
-              <li>Settlement Awareness Campaigns to your desired destination.</li>
+              <li>
+                Settlement Awareness Campaigns to your desired destination.
+              </li>
             </div>
           </div>
           <img src={image2} alt="cool" />
@@ -111,16 +164,51 @@ const About = () => {
         </div>
       </div>
       <div className="mail-list">
-        <h1>SUBSCRIBE TO OUR MAILING LIST</h1>
-        <div className="frm-d">
-          <input type="text" placeholder="First name" />
-          <input type="text" placeholder="Last name" />
-          <input type="text" placeholder="Email address" />
-          <input type="text" placeholder="Phone number" />
-        </div>
-        <div className="mail-but">
-          <button>Submit</button>
-        </div>
+        <h1>GET A FREE STATEMENT OF PURPOSE (Template)</h1>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="frm-d">
+            <input
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              type="text"
+              name="firstName"
+              placeholder="First name"
+            />
+            <input
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+            />
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              name="email"
+              placeholder="Email address"
+            />
+            <input
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              type="number"
+              name="phone"
+              placeholder="Phone number"
+            />
+          </div>
+          <div className="mail-but">
+            <button
+              type="submit"
+              style={{
+                backgroundColor: isSubmitted ? "green" : "#B50000",
+                marginTop: 20,
+              }}
+            >
+              {isSubmitted ? "Submitted" : "Submit"}
+            </button>
+            <div className="form-result">{result ? <Result /> : null}</div>
+          </div>
+        </form>
       </div>
     </div>
   );
