@@ -57,13 +57,13 @@ const Contact = () => {
     <div className="contact">
       <div className="con-us">
         <h1>CONTACT US</h1>
-        <p>We're always happy to hear from you</p>
+        <p> We're always happy to hear from you</p>
       </div>
       <div className="addr">
         <div className="add">
           <h3>CONTACT INFORMATION</h3>
           <p>
-            info@blazebrand.com, helpdesk@blazebrandlimited.com +234 705 327
+            info@blazebrandlimited.com, helpdesk@blazebrandlimited.com +234 705 327
             6426, +234 816 305 9266
           </p>
         </div>
@@ -90,7 +90,7 @@ const Contact = () => {
         </a>
       </div>
       <div className="bookings">
-        <h2>BOOK AN APPOINTMENT</h2>
+        <h2>BOOK A FREE APPOINTMENT</h2>
         <p>Provide your details below & we'll get back to you.</p>
         <form ref={form} onSubmit={sendEmail}>
         <div className="frm-d">
