@@ -80,6 +80,12 @@
   height: 400px;
   background-color: rgb(226, 220, 220);
 }
+.form-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 .mail-l h1 {
   color: rgb(56, 51, 51);
   margin: 0px;
@@ -91,20 +97,7 @@
   margin: 30px;
   border-style: none;
 }
-.input button {
-  height: 30px;
-  width: 100px;
-  border-radius: 0.3rem;
-  border-style: none;
-  color: white;
-  background-color: rgb(165, 0, 0);
-  position: relative;
-  left: 280px;
-  top: 20px;
-}
-.input button:hover {
-  background-color: brown;
-}
+
 @media screen and (max-width: 37.5em) {
   .a {
     flex-direction: column;
@@ -185,8 +178,10 @@
     flex-direction: column;
     gap: 20px;
   }
-  .mail-but {
-    margin-left: 30px;
+
+  .mail-but button {
+      text-align: center;
+      margin-top: 5px;
   }
 }
 @media screen and (max-width: 75em) {

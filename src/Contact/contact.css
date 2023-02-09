@@ -140,12 +140,15 @@
 @media screen and (max-width: 37.5em) {
     .addr{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .add{
-        margin-right: 50px;
+        padding-bottom: 20px;
     }
     .add p{
         width: 100%;
+        padding-top: 20px;
     }
     .con-us h1{
         font-size: 25px;
@@ -160,6 +163,7 @@
         font-size: 15px;
     }
     .frm-d{
+        width: 100%;
         /* padding-left: 30px; */
         padding-left: 10px;
         padding-right: 10px;
@@ -176,7 +180,7 @@
         margin-right: 10px !important;
     }
     .frm-d button{
-        margin-left: 50px;
+        text-align: center;
         border: none;
     }
 }

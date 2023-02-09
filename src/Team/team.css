@@ -5,6 +5,7 @@
 .t-head{
     background-color: rgb(228, 227, 227);
     height: 50px;
+    padding-top: 3px;
 }
 .t-head h1{
     text-align: center;
@@ -58,6 +59,9 @@
     }
     .team{
         height: auto;
+    }
+    .t-head {
+        padding-top: 3px;
     }
 }
 @media screen and (max-width: 75em) {

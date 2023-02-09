@@ -6,7 +6,7 @@
     text-align: center;
     background-color: #E7E7E7;
     height: 50px;
-    padding: 0;
+    padding-top: 5px;
 }
 .svs h1{
     font-weight: 700;
@@ -155,9 +155,12 @@
 }
 /* Media Queries */
 @media screen and (max-width: 37.5em){
+    .svs{
+        padding-top: 1px;
+    }
     .svs h1{
         font-size: 25px;
-        padding-top: 10px;
+        padding-top: 5px;
     }
     .grad h3{
         font-size: 25px;
@@ -174,7 +177,7 @@
     .cc-desc p{
         font-size: 15px;
         width: 100%;
-        padding-top: 20px;
+        padding-bottom: 30px;
     }
     .te-gen{
         flex-direction: column;
@@ -190,6 +193,7 @@
         font-size: 15px;
         padding-left: 60px;
         padding-right: 60px;
+        padding-top: 30px;
     }
     .mtd{
         height: 230px;

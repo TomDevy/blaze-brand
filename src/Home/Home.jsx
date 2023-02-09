@@ -25,12 +25,15 @@ import "./home.css";
 
 const Result = () => {
   return (
-    <p>"Your message has been sent Successfully. We will contact you soon!"</p>
+    <p>"Your message has been sent Successfully. Check your mail!"</p>
   );
 };
 
 const Home = () => {
-  const [isDone, setIsDone] = useState(false)
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useRef();
@@ -41,18 +44,26 @@ const Home = () => {
   const [result, showResult] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(form.current.value)
+
+    if (!firstName || !lastName || !email || !phone) {
+      return alert("Please fill in your details!")
+    }
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
         console.log("Success");
+        setFirstName('');
+        setLastName('');
+        setPhone('');
+        setEmail('');
+        showResult(true);
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000)
       },
       (error) => {
         console.log("failed");
       }
     );
-    e.target.reset();
-    showResult(true);
   };
 
   //hide result
@@ -61,9 +72,6 @@ const Home = () => {
     showResult(false);
   }, 5000);
 
-  const handleSubmit = () => {
-    setIsSubmitted(true);
-  };
 
   return (
     <div className="abu">
@@ -194,21 +202,20 @@ const Home = () => {
         </div>
       </div>
       <div className="mail-list">
-        <h1>GET A FREE SOP</h1>
+        <h1>GET A FREE STATEMENT OF PURPOSE (Template)</h1>
         <form ref={form} onSubmit={sendEmail}>
           <div className="frm-d">
-            <input  type="text" name="firstName" placeholder="First name" />
-            <input  type="text" name="lastName" placeholder="Last name" />
-            <input  type="text" name="email" placeholder="Email address" />
-            <input  type="number" name="phone" placeholder="Phone number" />
+            <input value={firstName} onChange={e => setFirstName(e.target.value)} type="text" name="firstName" placeholder="First name" />
+            <input value={lastName} onChange={e => setLastName(e.target.value)} type="text" name="lastName" placeholder="Last name" />
+            <input value={email} onChange={e => setEmail(e.target.value)} type="text" name="email" placeholder="Email address" />
+            <input value={phone} onChange={e => setPhone(e.target.value)} type="number" name="phone" placeholder="Phone number" />
           </div>
           <div className="mail-but">
             <button
               type="submit"
               style={{
-                backgroundColor: isSubmitted ? "green" : "#B50000",
+                backgroundColor: isSubmitted ? "green" : "#B50000", marginTop: 20
               }}
-              onClick={handleSubmit}
             >
               {isSubmitted ? "Submitted" : "Submit"}
             </button>
