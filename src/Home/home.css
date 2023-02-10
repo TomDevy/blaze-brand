@@ -316,8 +316,11 @@
         flex-direction: column;
     }
     .vis-ht p{
-        font-size: 20px;
+        font-size: 15px;
         width: 280px;
+    }
+    .eds p{
+        font-size: 15px;
     }
     .mvh img{
         width: 20%;
