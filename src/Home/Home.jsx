@@ -149,7 +149,7 @@ const Home = () => {
           >
             <SwiperSlide>
               {" "}
-              <img src={rev} alt="review" />
+              <img src="/assets/Afolabi.jpg" alt="review" />
               <p>
                 Your service was smooth and I enjoyed the level of
                 professionalism. Mr David Ashipa Sunday was very clear and he
@@ -160,7 +160,7 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <img src={rev} alt="review" />
+              <img src="/assets/Kennedy (1).jpg" alt="review" />
               <p>
                 I had a 1-hour consultation session with BBL and it answered all
                 the questions I had and didn't even knew I had. I could really
@@ -185,7 +185,7 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <img src={rev} alt="review" />
+              <img src="/assets/Chimezie.jpg" alt="review" />
               <p>
                 Was introduced to the Blaze Brand by a colleague who had
                 transacted with them and was happy to give good recommendations.
