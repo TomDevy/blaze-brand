@@ -52,6 +52,9 @@
     .main-policy{
         padding-top: 20px;
     }
+    .header-policy p{
+        font-size: 25px;
+    }
     .content-policy p{
         font-size: 15px;
     }
