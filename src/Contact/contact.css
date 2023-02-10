@@ -185,6 +185,13 @@
     }
 }
 @media screen and (max-width: 75em) {
+    .add h3 {
+        font-size: 15px;
+    }
+    .add p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
     .addr{
         flex-direction: column;
         padding-left: 100px;
