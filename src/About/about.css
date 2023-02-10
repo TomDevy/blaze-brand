@@ -188,7 +188,19 @@
   .a {
     flex-direction: column;
   }
+  .a p {
+    font-size: 15px;
+  }
   .b {
     flex-direction: column;
+  }
+  .b p {
+    font-size: 15px;
+  }
+  .texts-list {
+    font-size: 15px;
+  }
+  .excel p {
+    font-size: 18px;
   }
 }
