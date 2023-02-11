@@ -71,7 +71,6 @@ const Contact = () => {
     showResult(false);
   }, 5000);
  
-
   return (
     <div className="contact">
       <div className="con-us">
