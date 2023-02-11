@@ -122,7 +122,7 @@ const Contact = () => {
               { value: "May", label: `May ${new Date().getFullYear()}` },
               {
                 value: "September",
-                label: `January ${new Date().getFullYear()}`,
+                label: `September ${new Date().getFullYear()}`,
               },
             ]}
           />
@@ -151,7 +151,7 @@ const Contact = () => {
             style={{
               backgroundColor: isSubmitted ? "green" : "#B50000",
             }}
-            onClick={handleSubmit}
+ 
           >
             {isSubmitted ? "Booked" : "Book Appointment"}
           </button>
