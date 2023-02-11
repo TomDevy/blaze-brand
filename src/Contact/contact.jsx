@@ -70,7 +70,29 @@ const Contact = () => {
   setTimeout(() => {
     showResult(false);
   }, 5000);
- 
+ const [options, setOptions] = useState([]);
+
+ useEffect(() => {
+   const currentYear = new Date().getFullYear();
+   setOptions([
+     { label: `January ${currentYear}`, value: `01/${currentYear}` },
+     { label: `May ${currentYear}`, value: `05/${currentYear}` },
+     { label: `September ${currentYear}`, value: `09/${currentYear}` },
+   ]);
+
+   const currentMonth = new Date().getMonth();
+   if (currentMonth > 8) {
+     setOptions((prevOptions) => [
+       { label: `January ${currentYear + 1}`, value: `01/${currentYear + 1}` },
+       { label: `May ${currentYear + 1}`, value: `05/${currentYear + 1}` },
+       {
+         label: `September ${currentYear + 1}`,
+         value: `09/${currentYear + 1}`,
+       },
+     ]);
+   }
+ }, []);
+
   return (
     <div className="contact">
       <div className="con-us">
@@ -165,23 +187,19 @@ const Contact = () => {
                 { value: "United States", label: "United States" },
               ]}
             />
-          <Select
+            <Select
+              value={studyTime}
+              onChange={(e) => setStudyTime(e.target.value)}
               name="studyTime"
-            placeholder="When do you plan study?"
-            closeMenuOnSelect={true}
-            components={animatedComponents}
-            options={[
-              {
-                value: "January",
-                label: `January ${new Date().getFullYear()}`,
-              },
-              { value: "May", label: `May ${new Date().getFullYear()}` },
-              {
-                value: "September",
-                label: `September ${new Date().getFullYear()}`,
-              },
-            ]}
-          />
+              placeholder="When do you plan study?"
+              closeMenuOnSelect={true}
+              components={animatedComponents}
+              options={options.map(({ label, value }) => (
+                <option key={studyTime} value={value}>
+                  {label}
+                </option>
+              ))}
+            />
             <Select
               value={studyLevel}
               onChange={(e) => setStudyLevel(e.target.value)}
