@@ -14,14 +14,16 @@ const Navbar = () => {
     <nav className="nav">
       <div className="navbar">
         <Link to="./">
-              <img className="logo" src={logo} alt="bbl-logo" />
+          <img className="logo" src={logo} alt="bbl-logo" />
         </Link>
-              <ul className="nav-links">
+        <ul className="nav-links">
           <Link to="/about">ABOUT US</Link>
           <Link to="/services">SERVICES</Link>
           <Link to="/contact">CONTACT</Link>
           <Link to="/team">TEAM</Link>
-          <Link to="/blog">BLOG POST</Link>
+          <a target="_blank" href="https://blazebrandlimited.substack.com/ ">
+            FAQs
+          </a>
         </ul>
         <div className="mobile-nav">
           {isOpen ? (
@@ -46,9 +48,13 @@ const Navbar = () => {
             <Link onClick={() => setIsOpen(false)} to="/team">
               TEAM
             </Link>
-            <Link onClick={() => setIsOpen(false)} to="/blog">
-              BLOG POST
-            </Link>
+            <a
+              target="_blank"
+              href="https://blazebrandlimited.substack.com/"
+              onClick={() => setIsOpen(false)}
+            >
+              FAQs
+            </a>
           </ul>
         ) : null}
       </div>
