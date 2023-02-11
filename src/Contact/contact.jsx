@@ -20,8 +20,16 @@ const Result = () => {
 };
 
 const Contact = () => {
-  const animatedComponents = makeAnimated();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [studyLocation, setStudyLocation] = useState("");
+  const [studyTime, setStudyTime] = useState("");
+  const [studyLevel, setStudyLevel] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const animatedComponents = makeAnimated();
 
   const form = useRef();
 
@@ -32,16 +40,28 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+      if (!firstName || !lastName || !email || !phone || !studyLocation || !studyTime || !studyLevel ) {
+        return alert("Please fill in your details!");
+      }
+
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
         console.log("Success");
+        setFirstName("");
+        setLastName("");
+        setPhone("");
+        setEmail("");
+        setStudyLocation("");
+        setStudyTime("");
+        setStudyLevel("");
+        showResult(true);
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000);
       },
       (error) => {
         console.log("failed");
       }
     );
-    e.target.reset();
-    showResult(true);
   };
 
   //hide result
@@ -49,10 +69,6 @@ const Contact = () => {
   setTimeout(() => {
     showResult(false);
   }, 5000);
-  const handleSubmit = () => {
-    setIsSubmitted(true);
-  }
-
   return (
     <div className="contact">
       <div className="con-us">
@@ -151,7 +167,6 @@ const Contact = () => {
             style={{
               backgroundColor: isSubmitted ? "green" : "#B50000",
             }}
- 
           >
             {isSubmitted ? "Booked" : "Book Appointment"}
           </button>
