@@ -26,7 +26,7 @@ const Contact = () => {
   const form = useRef();
 
   const serviceId = "service_loyi959";
-  const templateId = "template_v0vv5n5";
+  const templateId = "template_c1p1bnn";
   const publicKey = "zFef1F-ROsvwMHOX1";
   const [result, showResult] = useState(false);
   const sendEmail = (e) => {
