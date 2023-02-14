@@ -86,6 +86,24 @@ const Contact = () => {
   setTimeout(() => {
     showResult(false);
   }, 5000);
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+
+  const studyTimeOptions = [
+    {
+      value: `January ${currentYear + (currentMonth > 0 ? 1 : 0)}`,
+      label: `January ${currentYear + (currentMonth > 0 ? 1 : 0)}`,
+    },
+    {
+      value: `May ${currentYear + (currentMonth > 4 ? 1 : 0)}`,
+      label: `May ${currentYear + (currentMonth > 4 ? 1 : 0)}`,
+    },
+    {
+      value: `September ${currentYear + (currentMonth > 8 ? 1 : 0)}`,
+      label: `September ${currentYear + (currentMonth > 8 ? 1 : 0)}`,
+    },
+  ];
   return (
     <div className="contact">
       <div className="con-us">
@@ -186,20 +204,7 @@ const Contact = () => {
               placeholder="When do you plan study?"
               closeMenuOnSelect={true}
               components={animatedComponents}
-              options={[
-                {
-                  value: `January ${new Date().getFullYear()}`,
-                  label: `January ${new Date().getFullYear()}`,
-                },
-                {
-                  value: `May ${new Date().getFullYear()}`,
-                  label: `May ${new Date().getFullYear()}`,
-                },
-                {
-                  value: `September ${new Date().getFullYear()}`,
-                  label: `September ${new Date().getFullYear()}`,
-                },
-              ]}
+              options={studyTimeOptions}
               onChange={(selectedOption) => setStudyTime(selectedOption.value)}
             />
             <Select
