@@ -35,13 +35,13 @@ const Footer = () => {
         </div>
         <div className="tip">
           <img src={mail} alt="m" />
-          <p>info@blazebrand.com</p>
+          <p>info@blazebrandlimited.com</p>
         </div>
         <div className="tip">
           <a href="https://wa.me/message/T6NMQMJDVUBSH1">
             <img src={phone} alt="p" />
           </a>
-          <p>+234 816 305 9266</p>
+          <p>+234 816 305 9266, +234 705 327 6426</p>
         </div>
         <div className="sim">
           <a href="https://www.instagram.com/blazebrandlimited1/">
