@@ -66,6 +66,9 @@
         flex-direction: column;
         margin-top: 20px;
     }
+    .tip p{
+        width: 115px;
+    }
 }
 @media screen and (max-width: 75em) {
     .all p{
