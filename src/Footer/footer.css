@@ -37,10 +37,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
 }
 .tip p{
     color: white;
+    width: 180px;
 }
 .arr {
     color: white;
