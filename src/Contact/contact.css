@@ -104,10 +104,8 @@
    border-radius: 0.1rem; 
 }
 .frm-d input::placeholder{
-    /* position: relative;
-    left: 10px; */
-    font-style: normal;
-    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.01em;
 }
 .b-in{
     display: grid;
