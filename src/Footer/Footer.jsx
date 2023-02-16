@@ -18,12 +18,19 @@ const Footer = () => {
       <div className="all">
         <img src={logo} alt="bbl-logo" />
         <p>
-          Blaze Brand Limited is an education & migration advisory firm with expert
-          solutions services: helping people migrate through the work or study routes.
+          Blaze Brand Limited is an education & migration advisory firm with
+          expert solutions services: helping people migrate through the work or
+          study routes.
         </p>
         <div className="boys">
-          <h4> <Link to='/terms'>Terms of Use</Link></h4>
-          <h4> <Link to='/policy'>Privacy Policy</Link></h4>
+          <h4>
+            {" "}
+            <Link to="/terms">Terms of Use</Link>
+          </h4>
+          <h4>
+            {" "}
+            <Link to="/policy">Privacy Policy</Link>
+          </h4>
           <h4>Bookings</h4>
           <h4>Career</h4>
         </div>
@@ -51,12 +58,14 @@ const Footer = () => {
           <a href="https://www.facebook.com/profile.php?id=100089098602386">
             <img src={fb} alt="p" />
           </a>
-          <a href="https://twitter.com/blazebrandltd1?t=EMKPOsOdx7uVpammVKl5_w&s=09">
-            <img src={tw} alt="p" />
-          </a>
-          <a href="https://www.linkedin.com/company/blaze-brand-limited/">
-            <img src={linkedIn} alt="p" />
-          </a>
+          <div className="sim-p">
+            <a href="https://twitter.com/blazebrandltd1?t=EMKPOsOdx7uVpammVKl5_w&s=09">
+              <img src={tw} alt="p" />
+            </a>
+            <a href="https://www.linkedin.com/company/blaze-brand-limited/">
+              <img src={linkedIn} alt="p" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="arr">
