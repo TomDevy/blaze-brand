@@ -24,14 +24,14 @@ const Team = () => {
         </div>
         <div className="text-block">
           <img src={Team2} alt="" />
-          <div className="tex">
+          <div className="tex-p">
           <h3>Lydia Owulo</h3>
           <p>Head, People Operations/Relationship Manager</p>
           </div>
         </div>
         <div className="text-block">
           <img src={Team3} alt="" />
-          <div className="tex">
+          <div className="tex-v">
           <h3>Victor Olaoye</h3>
           <p>Brand Strategist/Visual Designer</p>
           </div>
@@ -45,7 +45,7 @@ const Team = () => {
         </div>
         <div className="text-block">
           <img src={Team5} alt="" />
-          <div className="tex">
+          <div className="tex-p">
           <h3>Kola Olugbodi</h3>
           <p>Member Board of Advisors.CEO,Background Check Int.</p>
           </div>
