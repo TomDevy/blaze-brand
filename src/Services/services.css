@@ -64,6 +64,7 @@
     line-height: 30px;
     color: #303030;
     width: 649px;
+    margin-top: 15px;
 }
 .te-gen{
     display: flex;
@@ -81,6 +82,7 @@
     font-size: 20px;
     line-height: 30px;
     color: #303030;
+    margin-top: 15px;
     /* width: 300px; */
 }
 .test-con{
