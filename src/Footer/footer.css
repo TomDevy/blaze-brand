@@ -1,94 +1,214 @@
-.footer{
-    background-color: rgb(51, 48, 48);
-    padding: 20px;
+.contact{
+    padding-top: 100px;
 }
-.all{
+.con-us{
+    background-color: rgb(228, 227, 227);
+    text-align: center;
+    /* height: 120px; */
+}
+.con-us h1{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #303030;
+}
+.con-us p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #303030;
+}
+.addr{
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-around;
+    margin: 30px 0;
 }
-.all img{
-    width: 200px;
-    height: 200px;
-    padding-left: 30px;
-}
-.all p{
-    width: 500px;
-    padding-top: 60px;
+.add h3{
+    background-color:#B50000;
+    width: fit-content;
+    padding: 5px 10px;
     color: white;
+    border-radius: 0.3rem;
+    margin-bottom: 10px;
 }
-.boys{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding-top: 65px;
+.add p{
+    color: black;
+    font-weight: 600;
+    width: 450px;
 }
-.boys h4{
-    margin:0;
-    color: white;
-    /* padding-top: 60px; */
+.addi p{
+    color: rgb(59, 57, 57);
+    font-weight: 500;
+    /* height: 10px; */
+    width: 280px;
 }
-.adr{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.tip{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 13px;
-}
-.tip p{
-    color: white;
-    width: 180px;
-}
-.arr {
-    color: white;
+.soc-m{
     text-align: center;
 }
-.sim {
-    display: flex;
-    flex-direction: row;
+.soc-m img{
+    height: 70px;
+    margin: 0px 10px 30px 20px;
+    cursor: pointer;
 }
-.sim img{
-    width: 50px;
+.soc-m img:hover{
+    box-shadow: 10px 10px 5px #888888;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.5rem;
+}
+.bookings{
+    text-align: center;
+    /* height: 1000px; */
+    background-color: rgb(216, 210, 210);
+}
+.bookings h2{
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #303030;
+}
+.bookings p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #303030;
+}
+.frm-d{
+    display: grid;
+    gap: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+.frm-d label{
+    margin-left: -460px;
+}
+.frm-d button{
+    color: white;
+    width: 259px;
+    height: 42px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    border-style: none;
+    margin-bottom: 20px;
+    border-radius: 0.3rem;
+    background-color: #B50000;
+}
+.frm-d button:hover{
+    background-color: #e03434;
+}
+.frm-d input{
+   padding: 12px;
+   border: none;
+   border-radius: 0.1rem; 
+}
+.frm-d input::placeholder{
+    font-size: 16px;
+    letter-spacing: -0.01em;
+}
+.b-in{
+    display: grid;
     height: 50px;
-    cursor: pointer;
+    width: 600px;
+    margin: 30px;
+    position: relative;
+    top: 20px;
+    left: 250px;
+    border-style: none;
 }
-.sim-p img {
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
+.frm-d{
+    color: black;
+}
+#react-select-3-listbox{
+    width: 140px;
+    /* position: absolute;
+    left: 550px; */
+}
+#react-select-5-listbox{
+    width: 140px;
+    /* position: absolute;
+    left: 550px; */
+}
+#react-select-7-listbox{
+    width: 160px;
+    /* position: absolute;
+    left: 540px; */
 }
 @media screen and (max-width: 37.5em) {
-    .all{
+    .addr{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .all img{
+    .add{
+        padding-bottom: 10px;
+        margin-left: -80px;
+    }
+    .add p{
+        width: 300px;
+        padding-top: 10px;
+        margin-top: -10px;
+    }
+    .con-us h1{
+        font-size: 25px;
+    }
+    .con-us p{
+        font-size: 15px;
+    }
+    .add p{
+        font-size: 15px;
+    }
+    .bookings p{
+        font-size: 15px;
+    }
+    .frm-d{
         width: 100%;
+        /* padding-left: 30px; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    .all p{
-        width: 100%;
+    .frm-d label{
+        /* margin-left: 50px; */
+        /* width: 0%; */
+        margin-right: 30px;
+        margin-left: 0 !important;
     }
-    .adr{
-        flex-direction: column;
-        margin-top: 20px;
+    
+    .checkb {
+        width: auto !important;
+        margin-right: 10px !important;
     }
-    .tip p {
-        width: 115px;
+    .frm-d button{
+        text-align: center;
+        border: none;
     }
 }
 @media screen and (max-width: 75em) {
-    .all p{
-        width: 80%;
-        margin-right: 50px;
+    .add h3 {
+        font-size: 15px;
     }
-    .all img{
-        padding-right: 50px;
-        width: 80%;
+    .add p {
+        font-size: 15px;
+        margin-bottom: 10px;
     }
-    .adr{
+    .addr{
         flex-direction: column;
+        padding-left: 100px;
+    }
+    .frm-d {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
+    .frm-d label{
+        margin-left: 20px;
+    }
+    .frm-d button{
+        margin: 0 auto 20px;
+    }
+    .checkb{
+        width: auto;
     }
 }
