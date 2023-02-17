@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,41 +24,39 @@ import Travel from "../../src/components/icons/FlightW.png";
 import "./home.css";
 
 const Result = () => {
-  return (
-    <p>"Your message has been sent Successfully. Check your mail!"</p>
-  );
+  return <p>"Your message has been sent Successfully. Check your mail!"</p>;
 };
 
 const Home = () => {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useRef();
 
-  const serviceId = "service_loyi959";
-  const templateId = "template_v0vv5n5";
-  const publicKey = "zFef1F-ROsvwMHOX1";
+  const serviceId = "service_mvqjhuj";
+  const templateId = "template_96zlcwa";
+  const publicKey = "bEAp338vZ_AmOpyj_";
   const [result, showResult] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (!firstName || !lastName || !email || !phone) {
-      return alert("Please fill in your details!")
+      return alert("Please fill in your details!");
     }
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
         console.log("Success");
-        setFirstName('');
-        setLastName('');
-        setPhone('');
-        setEmail('');
+        setFirstName("");
+        setLastName("");
+        setPhone("");
+        setEmail("");
         showResult(true);
         setIsSubmitted(true);
-        setTimeout(() => setIsSubmitted(false), 5000)
+        setTimeout(() => setIsSubmitted(false), 5000);
       },
       (error) => {
         console.log("failed");
@@ -71,7 +69,6 @@ const Home = () => {
   setTimeout(() => {
     showResult(false);
   }, 5000);
-
 
   return (
     <div className="abu">
@@ -142,10 +139,11 @@ const Home = () => {
             loop={true}
             pagination={{ clickable: true }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, Autoplay]}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="swiper"
+            autoplay={{ delay: 2000 }}
           >
             <SwiperSlide>
               {" "}
@@ -198,6 +196,21 @@ const Home = () => {
               </p>
               <h3>Chimezie</h3>
             </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <img src="/assets/Ezekiel.jpg" alt="review" />
+              <p>
+                As far as I am concerned, Blaze Brand Limited offers the best
+                travel service you can ever imagined. I am marveled at the
+                top-notch customer service I got through my Mr. David Asipa. I
+                got my loan without any hassle. Even when I had issue with my
+                account, he contacted my account officer via email and the issue
+                was solved in no time. I can assure you BBL delivers result with
+                excellence and my JAPA goal was a success. Thanks to Mr. David
+                and the BBL team.
+              </p>
+              <h3>Ezekiel</h3>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
@@ -205,16 +218,41 @@ const Home = () => {
         <h1>GET A FREE STATEMENT OF PURPOSE (Template)</h1>
         <form ref={form} onSubmit={sendEmail}>
           <div className="frm-d">
-            <input value={firstName} onChange={e => setFirstName(e.target.value)} type="text" name="firstName" placeholder="First name" />
-            <input value={lastName} onChange={e => setLastName(e.target.value)} type="text" name="lastName" placeholder="Last name" />
-            <input value={email} onChange={e => setEmail(e.target.value)} type="text" name="email" placeholder="Email address" />
-            <input value={phone} onChange={e => setPhone(e.target.value)} type="number" name="phone" placeholder="Phone number" />
+            <input
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              type="text"
+              name="firstName"
+              placeholder="First name"
+            />
+            <input
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+            />
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              name="email"
+              placeholder="Email address"
+            />
+            <input
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              type="number"
+              name="phone"
+              placeholder="Phone number"
+            />
           </div>
           <div className="mail-but">
             <button
               type="submit"
               style={{
-                backgroundColor: isSubmitted ? "green" : "#B50000", marginTop: 20
+                backgroundColor: isSubmitted ? "green" : "#B50000",
+                marginTop: 20,
               }}
             >
               {isSubmitted ? "Submitted" : "Submit"}
