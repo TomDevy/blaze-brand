@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import logo from "../../src/components/images/main-logo.png";
 import mail from "../../src/components/icons/Mail.png";
 import addr from "../../src/components/icons/Location.png";
@@ -44,12 +45,14 @@ const Footer = () => {
           <img src={mail} alt="m" />
           <p>info@blazebrandlimited.com</p>
         </div>
-        <div className="tip">
+        <div className="sim">
           <a href="https://wa.me/message/T6NMQMJDVUBSH1">
             <img src={phone} alt="p" />
           </a>
-          <p>+234 816 305 9266</p>
-          <p>+234 705 327 6426</p>
+          <div className="conP">
+            <p>+234 816 305 9266</p>
+            <p>+234 705 327 6426</p>
+          </div>
         </div>
         <div className="sim">
           <a href="https://www.instagram.com/blazebrandlimited1/">
