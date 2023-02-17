@@ -32,9 +32,9 @@ const Contact = () => {
 
   const form = useRef();
 
-  const serviceId = "service_loyi959";
-  const templateId = "template_c1p1bnn";
-  const publicKey = "zFef1F-ROsvwMHOX1";
+  const serviceId = "service_mvqjhuj";
+  const templateId = "template_1x06it5";
+  const publicKey = "bEAp338vZ_AmOpyj_";
   const [result, showResult] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
@@ -47,8 +47,7 @@ const Contact = () => {
       !studyLocation ||
       !studyTime ||
       !studyLevel
-    )
-    {
+    ) {
       return alert("Please fill in your details!");
     }
     console.log(
@@ -86,6 +85,7 @@ const Contact = () => {
   setTimeout(() => {
     showResult(false);
   }, 5000);
+
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth();
@@ -113,10 +113,8 @@ const Contact = () => {
       <div className="addr">
         <div className="add">
           <h3>CONTACT INFORMATION</h3>
-          <p>
-            info@blazebrandlimited.com, helpdesk@blazebrandlimited.com +234 705
-            327 6426, +234 816 305 9266
-          </p>
+          <p>info@blazebrandlimited.com, helpdesk@blazebrandlimited.com</p>
+          <p>+234 705 327 6426, +234 816 305 9266</p>
         </div>
         <div className="add">
           <h3>ADDRESS</h3>
