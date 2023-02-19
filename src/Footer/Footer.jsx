@@ -33,7 +33,7 @@ const Footer = () => {
             <Link to="/policy">Privacy Policy</Link>
           </h4>
           <h4>Bookings</h4>
-          <h4>Career</h4>
+          <h4 onClick={() => alert=('There are no job openings at this time, pls check back.')}>Career</h4>
         </div>
       </div>
       <div className="adr">
