@@ -24,7 +24,7 @@ import Travel from "../../src/components/icons/FlightW.png";
 import "./home.css";
 
 const Result = () => {
-  return <p>"Your message has been sent Successfully. Check your mail!"</p>;
+  return <p>"Your message has been sent Successfully. Kindly Check your mail!"</p>;
 };
 
 const Home = () => {
