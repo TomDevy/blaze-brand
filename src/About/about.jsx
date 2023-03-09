@@ -15,7 +15,7 @@ import "./about.css";
 
 const Result = () => {
   return (
-    <p>"Your message has been sent Successfully. Check your mail!"</p>
+    <p>"Your message has been sent Successfully. Kindly Check your mail!"</p>
   );
 };
 
