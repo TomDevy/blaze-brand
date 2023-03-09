@@ -32,7 +32,7 @@ const Team = () => {
         <div className="text-block">
           <img src={Team3} alt="" />
           <div className="tex-v">
-          <h3>Victor Olaoye</h3>
+          <h3>Victor-Olaoye</h3>
           <p>Brand Strategist/Visual Designer</p>
           </div>
         </div>
