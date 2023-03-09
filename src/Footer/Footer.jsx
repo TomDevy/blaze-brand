@@ -20,7 +20,7 @@ const Footer = () => {
         <img src={logo} alt="bbl-logo" />
         <p>
           Blaze Brand Limited is an education & migration advisory firm with
-          expert solutions services: helping people migrate through the work or
+          expert solutions services:helping people migrate through the work or
           study routes.
         </p>
         <div className="boys">
